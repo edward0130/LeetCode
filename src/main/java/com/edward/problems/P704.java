@@ -1,14 +1,33 @@
 package com.edward.problems;
 
 public class P704 {
-    public int search(int[] nums, int target) {
+    public static int search(int[] nums, int target) {
 
-
-
-        return 0;
+        int l = 0;
+        int r = nums.length-1;
+        int c ;
+        while(l<=r)
+        {
+            c = l+(r-l)/2;
+            if(nums[c]==target)
+            {
+                return c;
+            }
+            else if(nums[c]<target)
+            {
+                l = c + 1;
+            }
+            else {
+                r = c - 1;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
-
+        int[] nums = {-1,3,4,5,6,9};
+        int target = 9;
+        int ret = P704.search(nums, target);
+        System.out.println(ret);
     }
 }
