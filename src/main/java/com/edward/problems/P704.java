@@ -1,5 +1,11 @@
 package com.edward.problems;
 
+/**
+ * 二分查找
+ *
+ * 基础的二分查找算法
+ *
+ */
 public class P704 {
     public static int search(int[] nums, int target) {
 
